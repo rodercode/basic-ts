@@ -12,15 +12,29 @@ const person: Person = { name: "marcus", age: 29 };
 
 // READONLY AND OPTIONAL INTERFACE
 interface PersonTwo {
-    readonly id:number // fixed value
-    name: string;
-    age: number;
-    nickname?:string // this is optional
-  }
+  readonly id: number; // fixed value
+  name: string;
+  age: number;
+  nickname?: string; // this is optional
+}
 
-  const personTwo: PersonTwo = {id:1, name: "marcus", age: 29 };
+const personTwo: PersonTwo = { id: 1, name: "marcus", age: 29 };
 
+// INTERFACE METHODS
 
- 
+interface PersonThree {
+  readonly id: number; // fixed value
+  name: string;
+  age: number;
+  nickname?: string; // this is optional
+  sayHi: (name: string) => string; // method that return a string
+}
 
-
+const personThree: PersonThree = {
+  id: 1,
+  name: "marcus",
+  age: 29,
+  sayHi: (name: string) => {
+    return "hello!";
+  },
+};
