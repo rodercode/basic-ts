@@ -8,5 +8,19 @@ interface Person {
   name: string;
   age: number;
 }
-
 const person: Person = { name: "marcus", age: 29 };
+
+// READONLY AND OPTIONAL INTERFACE
+interface PersonTwo {
+    readonly id:number // fixed value
+    name: string;
+    age: number;
+    nickname?:string // this is optional
+  }
+
+  const personTwo: PersonTwo = {id:1, name: "marcus", age: 29 };
+
+
+ 
+
+
