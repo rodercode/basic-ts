@@ -38,3 +38,19 @@ const personThree: PersonThree = {
     return "hello!";
   },
 };
+
+// INTERFACE METHOD PARAMETERS
+
+interface Product{
+    name: string,
+    price:number,
+    applyDiscount(discount:number):number;
+}
+
+const shoe: Product = {
+    name:"nike",
+    price:200,
+    applyDiscount(amount:number){
+        return 2;
+    }
+}
